@@ -1,12 +1,8 @@
 package com.backend_manager.bakend_manager.client.infrastructure;
 
-import java.util.Optional;
-
-import org.springframework.data.jpa.repository.JpaRepository;
-
 import com.backend_manager.bakend_manager.client.domain.Client;
+import com.backend_manager.bakend_manager.users.infrastructure.UserRepository;
 
-public interface ClientRepository extends JpaRepository<Client, Long> {
-    Optional<Client> findByemail(String email);
+public interface ClientRepository extends UserRepository<Client> {
 
 }
